@@ -20,7 +20,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Daily Quran',
+      title: '',
       theme: ThemeData(
         brightness: Brightness.dark,
         primarySwatch: Colors.blueGrey,
