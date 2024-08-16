@@ -7,6 +7,7 @@ class Styles{
 
   static Color selectionBGColor = const Color(0xFF5300b3);
   static Color appBarColor = const Color(0xFF180033);
+  static Color actionFabBGColor = const Color(0xFF180033);
 
 static TextStyle? getJuzStyle(BuildContext context)
 {

@@ -39,6 +39,20 @@ class ParahDetailModel {
       'edition': edition.toJson(),
     };
   }
+
+  ParahDetailModel copyWith({
+    int? number,
+    List<AyahDetail>? ayahs,
+    Map<String, Surah>? surahs,
+    EditionModel? edition,
+  }) {
+    return ParahDetailModel(
+      number: number ?? this.number,
+      ayahs: ayahs ?? this.ayahs,
+      surahs: surahs ?? this.surahs,
+      edition: edition ?? this.edition,
+    );
+  }
 }
 
 

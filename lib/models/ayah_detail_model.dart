@@ -2,6 +2,7 @@ import 'dart:convert';
 
 import 'package:daily_quran/models/edition_model.dart';
 import 'package:daily_quran/models/surah_model.dart';
+import 'package:just_audio/just_audio.dart';
 
 
 
@@ -20,7 +21,7 @@ class AyahDetail {
   final bool sajda;
   final String? audio;
   final List<String>? audioSecondary;
-  final bool? isPlaying;
+  final PlayerState? playerState;
 
   AyahDetail({
     required this.number,
@@ -36,7 +37,7 @@ class AyahDetail {
     required this.sajda,
     this.audio, // New nullable field
     this.audioSecondary,
-    this.isPlaying,// New nullable field
+    this.playerState,// New nullable field
   });
 
   // Create an AyahDetail instance from JSON
@@ -57,7 +58,6 @@ class AyahDetail {
       audioSecondary: json['audioSecondary'] != null
           ? List<String>.from(json['audioSecondary'])
           : null,
-      isPlaying: false,
     );
   }
 
@@ -77,7 +77,6 @@ class AyahDetail {
       'sajda': sajda,
       'audio': audio,
       'audioSecondary': audioSecondary,
-      'isPlaying':isPlaying,
     };
   }
 
@@ -98,7 +97,7 @@ class AyahDetail {
     bool? sajda,
     String? audio,
     List<String>? audioSecondary,
-    bool? isPlaying,
+    PlayerState? playerState,
   }) {
     return AyahDetail(
       number: number ?? this.number,
@@ -114,7 +113,7 @@ class AyahDetail {
       sajda: sajda ?? this.sajda,
       audio: audio ?? this.audio,
       audioSecondary: audioSecondary ?? this.audioSecondary,
-      isPlaying: isPlaying ?? this.isPlaying,
+      playerState: playerState ?? this.playerState,
     );
   }
 

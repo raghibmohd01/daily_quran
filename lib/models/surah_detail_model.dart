@@ -58,6 +58,31 @@ class SurahDetailModel {
     };
   }
 
+
+  // Implement the copyWith method
+  SurahDetailModel copyWith({
+    int? number,
+    String? name,
+    String? englishName,
+    String? englishNameTranslation,
+    String? revelationType,
+    int? numberOfAyahs,
+    List<AyahDetail>? ayahs,
+    EditionModel? edition,
+  }) {
+    return SurahDetailModel(
+      number: number ?? this.number,
+      name: name ?? this.name,
+      englishName: englishName ?? this.englishName,
+      englishNameTranslation: englishNameTranslation ?? this.englishNameTranslation,
+      revelationType: revelationType ?? this.revelationType,
+      numberOfAyahs: numberOfAyahs ?? this.numberOfAyahs,
+      ayahs: ayahs ?? this.ayahs,
+      edition: edition ?? this.edition,
+    );
+  }
+
+
   @override
   String toString() {
     return jsonEncode(this.toJson());
