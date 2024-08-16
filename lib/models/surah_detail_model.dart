@@ -3,6 +3,7 @@ import 'dart:convert';
 import 'package:daily_quran/models/edition_model.dart';
 
 
+import 'ayah_detail_model.dart';
 import 'ayah_model.dart';
 
 // Main model class for the surah
@@ -13,7 +14,7 @@ class SurahDetailModel {
   final String englishNameTranslation;
   final String revelationType;
   final int numberOfAyahs;
-  final List<Ayah> ayahs;
+  final List<AyahDetail> ayahs;
   final EditionModel edition;
 
   SurahDetailModel({
@@ -37,7 +38,7 @@ class SurahDetailModel {
       revelationType: json['revelationType'],
       numberOfAyahs: json['numberOfAyahs'],
       ayahs: (json['ayahs'] as List<dynamic>)
-          .map((ayahJson) => Ayah.fromJson(ayahJson as Map<String, dynamic>))
+          .map((ayahJson) => AyahDetail.fromJson(ayahJson as Map<String, dynamic>))
           .toList(),
       edition: EditionModel.fromJson(json['edition']),
     );

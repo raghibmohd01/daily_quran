@@ -6,7 +6,7 @@ import 'english_strings.dart';
 
 class StringKey {
   static const String dailyQuran = 'dailyQuran';
-  static const String juz = 'dailyQuran';
+  static const String juz = 'juz';
 
 }
 

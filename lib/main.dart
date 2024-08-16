@@ -1,10 +1,5 @@
-import 'dart:io';
 
-import 'package:daily_quran/screens/ayah_detail_screen.dart';
-import 'package:daily_quran/screens/home_screen.dart';
-import 'package:daily_quran/screens/parah_detail_screen.dart';
 import 'package:daily_quran/screens/select_edition_page.dart';
-import 'package:daily_quran/screens/surah_detail_screen.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 

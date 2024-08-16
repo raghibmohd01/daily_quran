@@ -1,5 +1,6 @@
 import 'dart:convert';
 
+import 'package:daily_quran/models/ayah_detail_model.dart';
 import 'package:daily_quran/models/edition_model.dart';
 import 'package:daily_quran/models/surah_model.dart';
 
@@ -8,7 +9,7 @@ import 'ayah_model.dart';
 // Main model class
 class ParahDetailModel {
   final int number;
-  final List<Ayah> ayahs;
+  final List<AyahDetail> ayahs;
   final Map<String, Surah> surahs;
   final EditionModel edition;
 
@@ -22,7 +23,7 @@ class ParahDetailModel {
   factory ParahDetailModel.fromJson(Map<String, dynamic> json) {
     return ParahDetailModel(
       number: json['number'],
-      ayahs: (json['ayahs'] as List).map((e) => Ayah.fromJson(e)).toList(),
+      ayahs: (json['ayahs'] as List).map((e) => AyahDetail.fromJson(e)).toList(),
       surahs: (json['surahs'] as Map<String, dynamic>).map(
             (k, e) => MapEntry(k, Surah.fromJson(e)),
       ),

@@ -1,3 +1,4 @@
+import 'package:daily_quran/models/ayah_detail_model.dart';
 import 'package:daily_quran/models/ayah_model.dart';
 import 'package:daily_quran/network/quran_repository.dart';
 import 'package:daily_quran/resources/styles.dart';
@@ -105,7 +106,7 @@ class _SurahDetailScreenState extends State<SurahDetailScreen> {
             : ListView.builder(
                 itemCount: surahDetailModel?.ayahs.length,
                 itemBuilder: (BuildContext context, int n) {
-                  Ayah? ayah = surahDetailModel?.ayahs[n];
+                  AyahDetail? ayah = surahDetailModel?.ayahs[n];
                   return Card(
                       margin: const EdgeInsets.all(8),
                       color: Colors.black,

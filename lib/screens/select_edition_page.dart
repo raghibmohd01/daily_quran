@@ -90,7 +90,8 @@ class _SelectEditionPageState extends State<SelectEditionPage> {
                       subtitle: Row(
                         children: [
                           Text('${LanguageUtil().getLanguageName(model?.language)} ',style: const TextStyle(color: Colors.blueAccent),),
-                          Text(' | ${model?.type?.capitalizeFirstLetter() ?? ''} ',style: TextStyle(color: Colors.white),),
+                          Text(' | ${model?.type?.capitalizeFirstLetter() ?? ''} ',style: const TextStyle(color: Colors.white),),
+                          Text(' | ${model?.format?.capitalizeFirstLetter() ?? ''} ',style: const TextStyle(color: Colors.white),),
                         ],
                       ),
 

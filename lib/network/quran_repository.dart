@@ -22,7 +22,7 @@ class QuranRepository {
       var response = await client.get(uri);
       if (response.statusCode == 200) {
         var responseMap = jsonDecode(response.body) as Map<String, dynamic>;
-        //print(responseMap['data']);
+        print(responseMap['data']);
         return responseMap['data'];
 
       } else {

@@ -16,6 +16,14 @@ static TextStyle? getJuzStyle(BuildContext context)
       ?.copyWith(height: 2,letterSpacing: 0.1,fontWeight: FontWeight.w500);
 }
 
+static TextStyle? getAyahTextStyle(BuildContext context)
+{
+  return Theme.of(context)
+      .textTheme
+      .bodyLarge
+      ?.copyWith(fontSize: 18,height: 2,letterSpacing: 0.1,fontWeight: FontWeight.w700);
+}
+
 static TextStyle? getSelectionStyle(BuildContext context)
 {
   return Theme.of(context)

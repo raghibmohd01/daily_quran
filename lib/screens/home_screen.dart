@@ -1,3 +1,4 @@
+import 'package:daily_quran/resources/strings.dart';
 import 'package:daily_quran/screens/ayah_detail_screen.dart';
 import 'package:daily_quran/screens/parah_detail_screen.dart';
 import 'package:daily_quran/screens/surah_detail_screen.dart';
@@ -14,7 +15,7 @@ class HomeScreen extends StatelessWidget {
     return Scaffold(
         appBar: AppBar(
           backgroundColor: Styles.appBarColor,
-          title: const Text('Daily Quran'),
+          title:  Text(AppStrings.dailyQuran),
         ),
         body: Center(
           child: Column(
@@ -33,7 +34,7 @@ class HomeScreen extends StatelessWidget {
                     );
                     
                   },
-                  child: const Text('Juz'),
+                  child:  Text(AppStrings.juz),
                 ),
               ),
               Container(
