@@ -147,6 +147,7 @@ class _SurahDetailScreenState extends State<SurahDetailScreen> {
                             Text(
                                 '${surahDetailModel?.number ?? 1} / $lastSurahNumber' ??
                                     'SurahNumber'),
+                            Spacer(),
 
                             IconButton(onPressed: (){
 
